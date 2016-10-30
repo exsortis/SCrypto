@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.osx.deployment_target = '10.11'
   spec.ios.deployment_target = '9.0'
+  spec.tvos.deployment_target = '9.0'
 
   spec.requires_arc = true
   spec.source = { git: "https://github.com/sgl0v/SCrypto.git", tag: spec.version.to_s, submodules: true }
@@ -21,7 +22,7 @@ Pod::Spec.new do |spec|
   CMD
 
   # add the new module to Import Paths
-  spec.xcconfig = { 
+  spec.xcconfig = {
   "SWIFT_INCLUDE_PATHS" => "$(PODS_ROOT)/SCrypto/Frameworks/$(PLATFORM_NAME)",
   "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/SCrypto/Frameworks/$(PLATFORM_NAME)"
   }
