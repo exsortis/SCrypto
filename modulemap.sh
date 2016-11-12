@@ -4,7 +4,7 @@ if [ "$#" -eq 2 ]; then
     SDKS=( $1 )
     BASE_DIR=$2
 else
-	SDKS=( iphoneos iphonesimulator macosx watchsimulator appletvsimulator)
+	SDKS=( iphoneos iphonesimulator macosx watchsimulator appletvos appletvsimulator)
 	BASE_DIR=$(exec pwd)
 fi
 
